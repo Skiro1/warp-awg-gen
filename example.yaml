@@ -1,0 +1,52 @@
+# warp-awg-gen configuration file
+# Usage: warp-awg-gen -c example.yaml
+
+# WARP+ license key (optional, leave empty for free tier)
+license_key: ""
+
+# Output file (leave empty for warp-awg.conf)
+output: ""
+
+# DNS servers
+dns: "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001"
+
+# WARP endpoint
+endpoint: "engage.cloudflareclient.com:2408"
+
+# PersistentKeepalive interval
+keepalive: 25
+
+# MTU
+mtu: 1280
+
+# Transport protocol to mimic: quic, dns, sip, none
+transport: "none"
+
+# Protocol mask preset: quic, dns, sip, random
+mask: "random"
+
+# Hex dump from Wireshark (converted to I1 CPS packet)
+from_hex: ""
+
+# AmneziaWG parameters (leave empty for auto-generation)
+awg:
+  jc: ~       # Junk packet count (0-10)
+  jmin: ~     # Junk packet min size (64-1024)
+  jmax: ~     # Junk packet max size (64-1024)
+  s1: ~       # S1 random prefix length in bytes (0-64)
+  s2: ~       # S2 random prefix length in bytes (0-64)
+  s3: ~       # S3 random prefix length in bytes (0-64)
+  s4: ~       # S4 random prefix length in bytes (0-32)
+  h1: ~       # H1 range (e.g. "100000-200000")
+  h2: ~       # H2 range (non-overlapping with H1)
+  h3: ~       # H3 range (non-overlapping with H1,H2)
+  h4: ~       # H4 range (non-overlapping with H1-H3)
+
+# CPS packets (I1-I5) - Custom Protocol Signature
+# Leave empty for auto-generation based on mask
+cps:
+  i1: ~       # CPS expression like '<b 0xabc><r 10><t>'
+  i2: ~
+  i3: ~
+  i4: ~
+  i5: ~
