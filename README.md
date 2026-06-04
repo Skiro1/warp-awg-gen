@@ -7,7 +7,7 @@ Generates AmneziaWG 2.0 configuration files for Cloudflare WARP with full CPS ca
 ## Features
 
 - Cloudflare WARP registration via the official API
-- WARP+ license key activation
+- WARP+ license key activation (not verified)
 - Registration caching (90 days) -- no API call needed for subsequent runs
 - CPS (Camouflage Packet Sending) for DPI bypass using real WARP QUIC packets
 - Protocol presets for I2-I5 randomization
