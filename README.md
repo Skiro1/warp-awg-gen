@@ -4,6 +4,9 @@ Generates AmneziaWG 2.0 configuration files for Cloudflare WARP with full CPS ca
 
 [Readme in Russian](README.ru.md)
 
+## New project
+- **[warp-cli](https://github.com/Skiro1/warp-cli)**
+
 ## Features
 
 - Cloudflare WARP registration via the official API
