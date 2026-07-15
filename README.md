@@ -9,6 +9,7 @@ Generates AmneziaWG 2.0 configuration files for Cloudflare WARP with full CPS ca
 - **[warp-cli](https://github.com/Skiro1/warp-cli)**
 - **[warp-masque-tun](https://github.com/Skiro1/warp-masque-tun)**
 - **[vpn-free-client](https://github.com/Skiro1/vpn-free-client/tree/vpn-v3)**
+- **[zapret-configurator](https://github.com/Skiro1/zapret-configurator)**
 
 ## Features
 
