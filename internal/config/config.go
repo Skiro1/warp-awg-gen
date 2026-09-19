@@ -79,7 +79,7 @@ type CLIFlags struct {
 func Default() *Config {
 	cfg := &Config{
 		DNS:       "1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001",
-		Endpoint:  "162.159.192.1:943",
+		Endpoint:  "",
 		Keepalive: 25,
 		MTU:       1280,
 		Transport: "none",

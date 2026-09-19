@@ -1,15 +1,9 @@
 # warp-awg-gen
 
-Generates AmneziaWG 2.0 configuration files for Cloudflare WARP with full CPS camouflage support.
+Generates AmneziaWG 3.1 configuration files for Cloudflare WARP with full CPS camouflage support.
 
 [Readme in Russian](README.ru.md)
 
-## New project
-
-- **[warp-cli](https://github.com/Skiro1/warp-cli)**
-- **[warp-masque-tun](https://github.com/Skiro1/warp-masque-tun)**
-- **[vpn-free-client](https://github.com/Skiro1/vpn-free-client/tree/vpn-v3)**
-- **[zapret-configurator](https://github.com/Skiro1/zapret-configurator)**
 
 ## Features
 
@@ -23,7 +17,7 @@ Generates AmneziaWG 2.0 configuration files for Cloudflare WARP with full CPS ca
 - Hex dump to CPS conversion (Wireshark -> I1)
 - YAML configuration file support
 - Automatic fastest endpoint selection via TCP latency test
-- Full WARP route table (AllowedIPs)
+
 
 ## Usage
 
@@ -141,12 +135,21 @@ I2 = <b 0x...> (random hex bytes)
 I3 = <b 0x...> (random hex bytes)
 I4 = <b 0x...> (random hex bytes)
 I5 = <b 0x...> (random hex bytes)
+ContentPaddingAddition = 10-100 
+RekeyAfterTime = 100-120 
+RekeyTimeout = 3-7 
+RejectAfterTime = 150-180 
+KeepaliveTimeout = 5-15 
+MaxHandshakeAttempts = 15-20 
+RandomTrailers = on 
+DisableCookies = on 
+
 
 [Peer]
 PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-AllowedIPs = <full WARP route table>
+AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = 162.159.192.1:943 (or fastest detected endpoint)
-PersistentKeepalive = 25
+PersistentKeepalive = 25-35
 ```
 
 ## Troubleshooting

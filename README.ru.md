@@ -1,6 +1,6 @@
 # warp-awg-gen
 
-Генератор конфигурационных файлов AmneziaWG 2.0 для Cloudflare WARP с полной поддержкой CPS-маскировки.
+Генератор конфигурационных файлов AmneziaWG 3.1 для Cloudflare WARP с полной поддержкой CPS-маскировки.
 
 ## Возможности
 
@@ -14,7 +14,7 @@
 - Конвертация hex-дампа из Wireshark в CPS
 - YAML-конфигурационный файл
 - Автоматический выбор самого быстрого endpoint через TCP-пинг
-- Полная таблица маршрутизации WARP (AllowedIPs)
+
 
 ## Использование
 
@@ -132,12 +132,20 @@ I2 = <b 0x...> (случайные hex-байты)
 I3 = <b 0x...> (случайные hex-байты)
 I4 = <b 0x...> (случайные hex-байты)
 I5 = <b 0x...> (случайные hex-байты)
+ContentPaddingAddition = 10-100 
+RekeyAfterTime = 100-120 
+RekeyTimeout = 3-7 
+RejectAfterTime = 150-180 
+KeepaliveTimeout = 5-15 
+MaxHandshakeAttempts = 15-20 
+RandomTrailers = on 
+DisableCookies = on 
 
 [Peer]
 PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-AllowedIPs = <полная таблица маршрутизации WARP>
+AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = 162.159.192.1:943 (или самый быстрый из обнаруженных)
-PersistentKeepalive = 25
+PersistentKeepalive = 25-35
 ```
 
 ## Решение проблем
