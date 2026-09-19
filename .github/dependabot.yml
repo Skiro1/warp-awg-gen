@@ -1,0 +1,19 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  # Отслеживание Go-зависимостей
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+
+  # Отслеживание GitHub Actions (если вы добавите их в будущем)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
